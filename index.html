@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Аварійне відкриття замків у Запоріжжі 24/7. Квартири, авто, сейфи. Приїзд 15 хвилин, без пошкоджень дверей.">
+    <meta name="description"
+        content="Аварійне відкриття замків у Запоріжжі 24/7. Квартири, авто, сейфи. Приїзд 15 хвилин, без пошкоджень дверей.">
     <title>Аварійне відкриття замків Запоріжжя | 24/7 | Без пошкоджень</title>
-    
+
     <!-- Іконки -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Сучасний шрифт Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+
     <style>
         /* Сучасні змінні (Dark Theme) */
         :root {
-            --bg-main: #0f172a;      
-            --bg-card: #1e293b;      
-            --accent: #ef4444;       
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --accent: #ef4444;
             --accent-hover: #dc2626;
-            --text-light: #f8fafc;   
-            --text-muted: #94a3b8;   
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
             --border-color: rgba(255, 255, 255, 0.1);
         }
 
@@ -67,7 +69,10 @@
             gap: 10px;
         }
 
-        .logo i { color: var(--accent); font-size: 26px; }
+        .logo i {
+            color: var(--accent);
+            font-size: 26px;
+        }
 
         .header-phone {
             display: flex;
@@ -82,11 +87,13 @@
             transition: color 0.3s ease;
         }
 
-        .header-phone a:hover { color: var(--accent); }
+        .header-phone a:hover {
+            color: var(--accent);
+        }
 
         .header-phone span {
             font-size: 12px;
-            color: #10b981; 
+            color: #10b981;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -112,8 +119,8 @@
             justify-content: center;
             text-align: center;
             padding: 120px 20px 60px;
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), var(--bg-main)), 
-                        url('https://images.unsplash.com/photo-1558025137-0b407b9fcfa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), var(--bg-main)),
+                url('https://images.unsplash.com/photo-1558025137-0b407b9fcfa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
         }
 
         .hero-content {
@@ -143,7 +150,9 @@
             letter-spacing: -1px;
         }
 
-        .hero h1 span { color: var(--accent); }
+        .hero h1 span {
+            color: var(--accent);
+        }
 
         .hero p {
             font-size: 20px;
@@ -208,8 +217,15 @@
             margin-bottom: 20px;
         }
 
-        .feature-card h3 { font-size: 22px; margin-bottom: 10px; }
-        .feature-card p { color: var(--text-muted); font-size: 16px; }
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
 
         /* --- Послуги (Оновлено з зображеннями) --- */
         .services {
@@ -222,7 +238,10 @@
             margin-bottom: 60px;
         }
 
-        .section-header h2 { font-size: 40px; font-weight: 800; }
+        .section-header h2 {
+            font-size: 40px;
+            font-weight: 800;
+        }
 
         .services-grid {
             display: grid;
@@ -241,7 +260,9 @@
             transition: all 0.3s;
         }
 
-        .service-item:hover { border-color: var(--text-muted); }
+        .service-item:hover {
+            border-color: var(--text-muted);
+        }
 
         /* Контейнер для фотографії */
         .service-img {
@@ -268,8 +289,11 @@
         .service-img::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to bottom, rgba(30,41,59,0) 0%, rgba(30,41,59,1) 100%);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(30, 41, 59, 0) 0%, rgba(30, 41, 59, 1) 100%);
         }
 
         .service-content {
@@ -335,7 +359,11 @@
             border-top: 1px solid var(--border-color);
         }
 
-        .footer-cta { font-size: 32px; font-weight: 800; margin-bottom: 20px; }
+        .footer-cta {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
 
         .footer-phone {
             font-size: 48px;
@@ -345,24 +373,87 @@
             margin-bottom: 30px;
         }
 
-        .copyright { color: var(--text-muted); font-size: 14px; margin-top: 40px; }
+        .copyright {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 40px;
+        }
 
         /* --- Анімації --- */
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
-        @keyframes pulse-fab { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse-fab {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(239, 68, 68, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         /* --- Адаптивність (Mobile) --- */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }
-            .hero p { font-size: 16px; }
-            .header-phone a { font-size: 16px; }
-            .btn { width: 100%; font-size: 18px; padding: 16px; }
-            .footer-phone { font-size: 32px; }
-            .fab-call { bottom: 20px; right: 20px; width: 60px; height: 60px; }
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .header-phone a {
+                font-size: 16px;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 18px;
+                padding: 16px;
+            }
+
+            .footer-phone {
+                font-size: 32px;
+            }
+
+            .fab-call {
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Шапка -->
@@ -381,8 +472,10 @@
         <div class="hero-content">
             <div class="badge">🔥 Екстренний виклик у Запоріжжі</div>
             <h1>Аварійне відкриття замків <span>БЕЗ ПОШКОДЖЕНЬ</span></h1>
-	    <h2>відкриття авто • відкриття квартир • відкриття сейфів • відкриття будь-яких видів замків • встановлення замків • відкриття навісних замків • термінова аварійна допомога</span></h2>		
-            <p>Зачинилися двері? Втратили ключі? Заблокувалося авто? Досвідчений майстер приїде за 20-30 хвилин в будь-який район міста.</p>
+            <h2>відкриття авто • відкриття квартир • відкриття сейфів • відкриття будь-яких видів замків • встановлення
+                замків • відкриття навісних замків • термінова аварійна допомога</span></h2>
+            <p>Зачинилися двері? Втратили ключі? Заблокувалося авто? Досвідчений майстер приїде за 20-30 хвилин в
+                будь-який район міста.</p>
             <a href="tel:+380985257639" class="btn">
                 <i class="fa-solid fa-phone-volume"></i> ВИКЛИКАТИ МАЙСТРА
             </a>
@@ -414,47 +507,50 @@
             <h2>Що ми відкриваємо</h2>
         </div>
         <div class="services-grid">
-            
+
             <!-- Послуга 1: Квартири -->
             <div class="service-item">
                 <div class="service-img">
-                    <img src="dr.jpg" alt="Відкриття квартирних дверей">
+                    <img src="door.jpg" alt="Відкриття квартирних дверей">
                 </div>
                 <div class="service-content">
                     <div class="overlap-icon"><i class="fa-solid fa-house-chimney"></i></div>
                     <h3>Квартири та будинки</h3>
-                    <p>Відкриття вхідних, броньованих, металопластикових та міжкімнатних дверей. Заміна серцевини замка на місці.</p>
+                    <p>Відкриття вхідних, броньованих, металопластикових та міжкімнатних дверей. Заміна серцевини замка
+                        на місці.</p>
                 </div>
             </div>
 
             <!-- Послуга 2: Авто -->
             <div class="service-item">
                 <div class="service-img">
-                    <img src="avto1.jpg" alt="Аварійне відкриття авто">
+                    <img src="avto.jpg" alt="Аварійне відкриття авто">
                 </div>
                 <div class="service-content">
                     <div class="overlap-icon"><i class="fa-solid fa-car"></i></div>
                     <h3>Автомобілі</h3>
-                    <p>Акуратне розблокування дверей, багажників, капотів будь-яких марок авто. Якщо ключі залишились в салоні.</p>
+                    <p>Акуратне розблокування дверей, багажників, капотів будь-яких марок авто. Якщо ключі залишились в
+                        салоні.</p>
                 </div>
             </div>
 
             <!-- Послуга 3: Сейфи -->
             <div class="service-item">
                 <div class="service-img">
-                    <img src="self1.jpg" alt="Відкриття сейфів">
+                    <img src="self.jpg" alt="Відкриття сейфів">
                 </div>
                 <div class="service-content">
                     <div class="overlap-icon"><i class="fa-solid fa-unlock-keyhole"></i></div>
                     <h3>Сейфи</h3>
-                    <p>Делікатне відкриття сейфів (механічних та електронних), металевих шаф, банкоматів та поштових скриньок.</p>
+                    <p>Делікатне відкриття сейфів (механічних та електронних), металевих шаф, банкоматів та поштових
+                        скриньок.</p>
                 </div>
             </div>
 
             <!-- Послуга 4: Ремонт -->
             <div class="service-item">
                 <div class="service-img">
-                    <img src="other1.jpg" alt="Ремонт та заміна замків">
+                    <img src="other.jpg" alt="Ремонт та заміна замків">
                 </div>
                 <div class="service-content">
                     <div class="overlap-icon"><i class="fa-solid fa-tools"></i></div>
@@ -477,11 +573,12 @@
         <p style="color: var(--text-muted); margin-bottom: 10px;">Телефонуйте, майстер вже готовий до виїзду:</p>
         <a href="tel:+380985257639" class="footer-phone">+38 (098) 525-76-39</a>
         <p>м. Запоріжжя та передмістя</p>
-        
+
         <div class="copyright">
             © 2015-2026 ZP-Lock — Служба аварійного відкриття замків. Всі права захищено.
         </div>
     </footer>
 
 </body>
+
 </html>
