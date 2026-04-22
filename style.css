@@ -165,6 +165,52 @@
         box-shadow: 0 15px 30px rgba(239, 68, 68, 0.6);
     }
 
+    .hero-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .social-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: white;
+        transition: transform 0.3s, background 0.3s;
+    }
+    
+    .social-icon.viber {
+        background-color: rgba(115, 96, 242, 0.2);
+        border: 1px solid #7360f2;
+        color: #7360f2;
+    }
+    
+    .social-icon.viber:hover {
+        background-color: #7360f2;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(115, 96, 242, 0.4);
+    }
+    
+    .social-icon.telegram {
+        background-color: rgba(0, 136, 204, 0.2);
+        border: 1px solid #0088cc;
+        color: #0088cc;
+    }
+    
+    .social-icon.telegram:hover {
+        background-color: #0088cc;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 136, 204, 0.4);
+    }
+
     /* --- Переваги --- */
     .features {
         padding: 80px 5%;
@@ -316,22 +362,71 @@
         font-size: 15px;
     }
 
-    /* --- Плаваюча кнопка дзвінка --- */
-    .fab-call {
+    /* --- Плаваючі кнопки зв'язку --- */
+    .floating-buttons {
         position: fixed;
         bottom: 30px;
         right: 30px;
-        width: 65px;
-        height: 65px;
-        background-color: var(--accent);
-        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 9999;
+        align-items: center;
+    }
+
+    .floating-btn {
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        line-height: normal;
+        font-size: 26px;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 0;
+    }
+
+    .floating-btn i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+
+    .floating-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .floating-btn.viber {
+        background-color: #7360f2;
+        box-shadow: 0 5px 15px rgba(115, 96, 242, 0.4);
+    }
+
+    .floating-btn.viber:hover {
+        box-shadow: 0 8px 20px rgba(115, 96, 242, 0.6);
+    }
+
+    .floating-btn.telegram {
+        background-color: #0088cc;
+        box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
+    }
+
+    .floating-btn.telegram:hover {
+        box-shadow: 0 8px 20px rgba(0, 136, 204, 0.6);
+    }
+
+    .fab-call {
+        width: 65px;
+        height: 65px;
+        background-color: var(--accent);
         font-size: 28px;
         box-shadow: 0 10px 30px rgba(239, 68, 68, 0.5);
-        z-index: 9999;
         animation: pulse-fab 2s infinite;
     }
 
@@ -354,7 +449,40 @@
         font-weight: 800;
         color: var(--accent);
         display: block;
+        margin-bottom: 20px;
+    }
+
+    .footer-socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
         margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .social-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-weight: 600;
+        color: white;
+        font-size: 16px;
+        transition: transform 0.3s ease, opacity 0.3s;
+    }
+
+    .social-btn:hover {
+        transform: translateY(-3px);
+        opacity: 0.9;
+    }
+
+    .social-btn.viber {
+        background-color: #7360f2;
+    }
+
+    .social-btn.telegram {
+        background-color: #0088cc;
     }
 
     .copyright {
@@ -428,9 +556,19 @@
             font-size: 32px;
         }
 
-        .fab-call {
+        .floating-buttons {
             bottom: 20px;
             right: 20px;
+            gap: 12px;
+        }
+
+        .floating-btn {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+        }
+
+        .fab-call {
             width: 60px;
             height: 60px;
         }
